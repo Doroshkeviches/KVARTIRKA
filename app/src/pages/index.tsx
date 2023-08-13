@@ -34,7 +34,7 @@ const main = () => {
                 datesArray.map(it => {
                     setAsteroidList(prev => [...prev, ...data.near_earth_objects[it]])
                 })
-                setNextLink(data.links.next)
+                setNextLink(data.links.next.replace('http', 'https')) // fix blocked Mixed Content
             })
     }, [])
 
@@ -47,7 +47,7 @@ const main = () => {
                     datesArray.map(it => {
                         setAsteroidList(prev => [...prev, ...data.near_earth_objects[it]])
                     })
-                    setNextLink(data.links.next)
+                    setNextLink(data.links.next.replace('http', 'https')) // fix blocked Mixed Content
                     setFetching(false)
                 })
         }
