@@ -1,0 +1,24 @@
+.body {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.planet {
+    background: url('../../assets/planeta_zemlia_kosmos_167499_2560x1600\ 1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    position: sticky;
+    top: 138px;
+    height: 80vh;
+    width: 40%;
+    max-width: 377px;
+    margin-right: 4%;
+}
+
+@media only screen and (max-width: 600px) {
+    .planet {
+        width: 15%;
+        margin-right: 2%;
+    }
+}

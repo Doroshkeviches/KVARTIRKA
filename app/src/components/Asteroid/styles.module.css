@@ -1,0 +1,108 @@
+.date {
+    color: #FFF;
+    font-family: Helvetica;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+}
+
+.distanceContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.distance {
+    color: #FFF;
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+
+
+.diameter {
+    color: var(--white-base, #FFF);
+    font-family: Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.diameter:before {
+    content: 'Ø ';
+}
+
+.description {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.name {
+    color: #FFF;
+    font-family: Helvetica;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    text-decoration-line: underline;
+}
+
+.asteroid {
+    display: flex;
+    align-items: center;
+    margin: 8px 0px;
+}
+
+
+
+.button {
+    padding: 2px 11px;
+    border-radius: 16px;
+    background: rgba(248, 102, 0, 0.15);
+    color: rgba(245, 222, 217, 1);
+    font-family: Helvetica;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    /* 181.818% */
+    letter-spacing: 1px;
+    margin-right: 10px;
+}
+
+.button:hover {
+    color: rgba(255, 255, 255, 1);
+    background: #F86600;
+}
+
+.danger {
+    color: #e5e4e3;
+    font-family: Helvetica;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.buttonContainer {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+.item {
+    margin-bottom: 26px;
+}
+.dangerContainer {
+    display: flex;
+    align-items: center;
+}
