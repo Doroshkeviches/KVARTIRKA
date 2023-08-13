@@ -16,12 +16,6 @@ const main = () => {
     const { items, spacing, setSpacing }: any = useAppContext()
 
     useEffect(() => {
-        console.log(document.documentElement.scrollHeight, 'height')
-        console.log(document.documentElement.scrollTop, 'ScrollTop')
-        console.log(window.innerHeight, 'InnetHeight')
-
-
-
         const date = new Date()
         const year = date.getFullYear()
         const month = date.getMonth() + 1

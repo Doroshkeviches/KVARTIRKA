@@ -23,7 +23,7 @@ export default function () {
                 })
         }
     }, [id])
-    console.log(asteroid)
+    
     if (fetching) {
         return (
             <div style={{

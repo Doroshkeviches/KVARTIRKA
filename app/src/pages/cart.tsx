@@ -14,9 +14,7 @@ import AsteroidIcon from '@/components/Icons/AsteroidIcon';
 import Link from 'next/link';
 const cart = () => {
     const { items, spacing }: any = useAppContext()
-
-
-    console.log(items)
+    
     return (
         <PlanetLayout>
             <div>
