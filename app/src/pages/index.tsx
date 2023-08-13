@@ -27,7 +27,7 @@ const main = () => {
         const month = date.getMonth() + 1
         const day = date.getDate()
 
-        fetch(url + '/feed' + `?start_date=${year}-${month}-${day}&end_date=${year}-${month}-${day}&detailed=false&api_key=${API_KEY}`)
+        fetch(url + '/feed' + `?start_date=${year}-${month}-${day}&end_date=${year}-${month}-${day}&api_key=${API_KEY}`)
             .then(res => res.json())
             .then(data => {
                 const datesArray = Object.keys(data.near_earth_objects)
