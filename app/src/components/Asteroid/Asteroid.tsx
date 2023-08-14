@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './styles.module.css'
 import Image from 'next/image';
 import { dateOptions } from '@/constants';
@@ -14,10 +14,17 @@ interface Props {
 }
 const Asteroid = ({ item }: Props) => {
     const { items, spacing, updateItems }: any = useAppContext()
-
+    const [selected, setSelected] = useState(false)
+    useEffect(() => {
+        if (items.find((it: OneAsteroid) => it.id === item.id)) {
+            console.log(items, item)
+            setSelected(true)
+        }
+    }, [items])
     const buttonHandler = () => {
-        updateItems(item)
-
+        if (!selected) {
+            updateItems(item)
+        }
     }
 
     const date = new Date(item.close_approach_data[0].close_approach_date).toLocaleString("ru-US", dateOptions as Intl.DateTimeFormatOptions)
@@ -36,7 +43,7 @@ const Asteroid = ({ item }: Props) => {
                     </div>
                     <Arrow />
                 </div>
-                <AsteroidIcon size={+item.estimated_diameter.meters.estimated_diameter_min > 150 ? 'big' : 'small' }/>
+                <AsteroidIcon size={+item.estimated_diameter.meters.estimated_diameter_min > 150 ? 'big' : 'small'} />
                 <div className={styles.description}>
                     <Link href={`${item.id}`}>
                         <div className={styles.name}>
@@ -51,7 +58,7 @@ const Asteroid = ({ item }: Props) => {
             <div className={styles.buttonContainer}>
                 <button onClick={() => {
                     buttonHandler()
-                }} className={styles.button}>Заказать</button>
+                }} className={styles.button}>{selected ? "В корзине" : "Заказать"}</button>
                 {item.is_potentially_hazardous_asteroid && <div className={styles.dangerContainer}><DangerIcon /><div className={styles.danger}>Опасен</div></div>}
             </div>
         </div>
