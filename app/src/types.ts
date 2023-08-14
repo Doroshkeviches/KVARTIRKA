@@ -40,8 +40,8 @@ type MissDistance = {
 }
 export type Context = {
     items: Array<OneAsteroid> | [],
-    updateItems: () => void,
+    updateItems: (newItems: OneAsteroid) => void,
     spacing: string,
-    setSpacing: () => void
+    updateSpacing: (str: string) => void
 
 }

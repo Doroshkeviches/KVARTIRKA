@@ -9,11 +9,11 @@ import Image from 'next/image';
 import DangerIcon from '@/components/Icons/DangerIcon';
 import PlanetLayout from '@/components/PlanetLayout/PlanetLayout';
 import cartStyles from '@/styles/cart.module.css'
-import { OneAsteroid } from '@/types';
+import { Context, OneAsteroid } from '@/types';
 import AsteroidIcon from '@/components/Icons/AsteroidIcon';
 import Link from 'next/link';
 const cart = () => {
-    const { items, spacing }: any = useAppContext()
+    const { items, spacing } = useAppContext() as Context
     
     return (
         <PlanetLayout>

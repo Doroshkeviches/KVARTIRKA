@@ -13,7 +13,7 @@ const main = () => {
     const [nextLink, setNextLink] = useState<RequestInfo | URL>('')
     const [fetching, setFetching] = useState(false)
     const [asteroidList, setAsteroidList] = useState<OneAsteroid[]>([])
-    const { items, spacing, setSpacing }: any = useAppContext()
+    const { items, spacing, updateSpacing } = useAppContext() as Context
 
     useEffect(() => {
         const date = new Date()
@@ -67,13 +67,13 @@ const main = () => {
                 <div className={styles.change}>
                     <div style={{
                         textDecorationLine: spacing === 'km' ? 'underline' : 'none'
-                    }} className={styles.changeItem} onClick={() => setSpacing('km')}>
+                    }} className={styles.changeItem} onClick={() => updateSpacing('km')}>
                         в километрах
                     </div>
                     <div className={styles.changeSeparator}> | </div>
                     <div style={{
                         textDecorationLine: spacing === 'luna' ? 'underline' : 'none'
-                    }} className={styles.changeItem} onClick={() => setSpacing('luna')}>
+                    }} className={styles.changeItem} onClick={() => updateSpacing('luna')}>
                         в лунных орбитах
                     </div>
                 </div>

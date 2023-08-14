@@ -4,10 +4,10 @@ import { getNumber, getPhrase } from '@/utils';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import styles from '@/styles/singleAsteroid.module.css'
-import { OneAsteroid, Close } from '@/types';
+import { OneAsteroid, Close, Context } from '@/types';
 
 export default function () {
-    const { spacing }: any = useAppContext()
+    const { spacing } = useAppContext() as Context
 
     const { query } = useRouter()
     const id = query.id

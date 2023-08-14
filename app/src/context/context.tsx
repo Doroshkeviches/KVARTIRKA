@@ -11,12 +11,15 @@ export function AppWrapper({ children }: Childrens) {
     const updateItems = (newItems: OneAsteroid) => {
         setItems((prev) => [...prev, newItems]);
     }
+    const updateSpacing = (str: string) => {
+        setSpacing(str)
+    }
     return (
         <AppContext.Provider value={{
             items,
             updateItems,
             spacing,
-            setSpacing
+            updateSpacing,
         } as Context}>
             {children}
         </AppContext.Provider>
